@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --spotify-green: 30, 215, 96;
+  /* RGB values for Spotify's green */
+  --spotify-black: 25, 20, 20;
+  /* Dark background, almost black */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    /* Light text for dark theme */
+    --background-start-rgb: 18, 18, 18;
+    /* Spotify's dark gray to black gradient start */
+    --background-end-rgb: 25, 20, 20;
+    /* Spotify's dark gray to black gradient end */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb)));
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-bar-container input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid rgba(var(--spotify-green), 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  caret-color: rgb(var(--spotify-green));
+  border-radius: 4px;
+}
+
+.search-bar-container button {
+  padding: 10px 20px;
+  background-color: rgb(var(--spotify-green));
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar-container button:hover {
+  background-color: rgba(var(--spotify-green), 0.8);
+}
+
+.recommendations-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Slightly transparent black */
+}
+
+.song-card {
+  border: 1px solid rgba(var(--spotify-green), 0.5);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 15px;
+  color: white;
+  background-color: rgba(18, 18, 18, 0.9);
+}
+
+/* Adding additional styles for the footer */
+footer {
+  padding: 1rem;
+  background-color: rgb(var(--background-end-rgb));
+  color: white;
+  border-top: 1px solid rgba(var(--spotify-green), 0.5);
+}
+
+footer a {
+  color: rgb(var(--spotify-green));
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: rgba(var(--spotify-green), 0.8);
+}
