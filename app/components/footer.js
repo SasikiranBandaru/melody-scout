@@ -28,7 +28,7 @@ const Footer = () => {
             © 2023 MelodyScout. All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
-            <Link href="https://github.com/Ccrewe92/MelodyScout_WebFinal">
+            <Link href="https://github.com/SasikiranBandaru/melody-scout.git">
               <span className="cursor-pointer">
                 <img src="/github-mark.png" className="h-8 w-auto" alt="GitHub Logo" />
                 <span className="sr-only">GitHub account</span>
